@@ -1,0 +1,43 @@
+
+.header {
+  background: white;
+  width: 100%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+
+  .header-logo {
+
+    svg {
+      fill: black;
+    }
+
+  }
+
+  @if $enable-grid-classes {
+    .container-head {
+      //@include make-container();
+      //@include make-container-max-widths();
+    }
+  }
+
+  .navbar-nav>li>a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+
+@media (max-width: 757px) {
+  header .navbar .navbar-brand {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header .navbar .navbar-brand {
+    padding-top: 0;
+    max-width: 150px;
+    margin: 0;
+  }
+}

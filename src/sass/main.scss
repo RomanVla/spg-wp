@@ -1,0 +1,25 @@
+$theme-location: "..";
+
+@charset "utf-8";
+
+// Import a Google Font
+$FontPathOpenSans: "../node_modules/open-sans-fonts/open-sans";
+@import "../../node_modules/open-sans-fonts/open-sans.scss";
+$roboto-font-path: "../node_modules/roboto-fontface/fonts";
+@import "../../node_modules/roboto-fontface/css/roboto/sass/roboto-fontface.scss";
+
+// Import a Fa Icons
+$fa-font-path:"../node_modules/@fortawesome/fontawesome-free/webfonts" !default;
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+
+// Import a Bootstrap
+@import "vendors/bootstrap";
+
+// Import a Variables
+@import 'variables';
+
+// Import SPG-style
+@import 'mixins';
+@import 'global';
+@import 'components/all';
+@import 'pages/all';

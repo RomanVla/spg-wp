@@ -1,0 +1,14 @@
+#excluded directories
+node_modules/
+
+#excluded files
+package-lock.json
+*.log
+
+style.css
+style.css.map
+
+js/scripts.min.js
+js/scripts.min.js.map
+
+css/*

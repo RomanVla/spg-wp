@@ -1,0 +1,33 @@
+{
+  "name": "spg",
+  "version": "1.0.0",
+  "description": "Softwareplanetgroup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "SPG",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.5.0",
+    "bootstrap": "^4.0.0",
+    "bulma": "^0.7.4",
+    "jquery": "^3.4.1",
+    "open-sans-fonts": "^1.5.1",
+    "popper.js": "^1.14.7",
+    "roboto-fontface": "^0.10.0"
+  }
+}
