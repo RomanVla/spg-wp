@@ -113,15 +113,12 @@ function get_section_footer_html() {
 }
 
 ?>
-                    <footer class="footer container-fluid">
-                        <?= get_section_footer_html(); ?>
-                    </footer>
-                </div><!-- #site-content-inner -->
+                        </div><!-- #site-content -->
+        <footer class="footer">
+            <?= '' //get_section_footer_html(); ?>
+        </footer>
 
+    <?php wp_footer(); ?>
 
-        </div><!-- #site-content -->
-
-<?php wp_footer(); ?>
-
-</body>
+    </body>
 </html>

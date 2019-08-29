@@ -89,7 +89,7 @@ if (!class_exists('SectionPageIntro')) {
             $html_buttons = '';
             foreach ($this->data['buttons'] as $button) {
                 $html_button = '
-                    <div class="spg-page-intro-main__button btn btn-secondary">
+                    <div class="spg-page-intro-main__button">
                         <a id="page-intro-btn-1" href="{{button_url}}" role="button"> {{button_text}} </a>
                     </div>';
 
@@ -107,7 +107,6 @@ if (!class_exists('SectionPageIntro')) {
         private function html_template() {
             return '
                 <section class="spg-page-intro">
-                    <div class="container">
                         <div class="spg-page-intro-main__wrapper">
                             <div class="spg-page-intro-main">
                             
@@ -125,7 +124,6 @@ if (!class_exists('SectionPageIntro')) {
                 
                             </div>
                         </div>
-                    </div>
                 
                 <video class="spg-page-intro__video" data-element="main-video" autoplay="" loop="" muted="">
                     <source src="{{video_mp4}}" type="video/mp4">

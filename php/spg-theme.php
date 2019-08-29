@@ -285,6 +285,10 @@ if (!class_exists('Theme_SPG')) {
             global $theme_spg;
 
             return '
+                <header></header>
+                ';
+
+            return '
                 <header class="header container-fluid px-0">
                     <section class="px-4">
                         <div class="container-head">

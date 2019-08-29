@@ -22,7 +22,7 @@ if (!function_exists('get_current_page_title')) {
 }
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('m-0'); ?>>
+<article id="post-<?php the_ID(); ?>">
 
     <?= get_current_page_title(); ?>
 

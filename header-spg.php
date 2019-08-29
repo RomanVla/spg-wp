@@ -45,6 +45,4 @@ global $theme_spg;
 
 
     <?= $theme_spg->get_section_header_html(); ?>
-    <div id="custom-content" class="site-content">
-
-        <div <?php content_wrap_class("site-content-inner row"); ?>>
+    <div id="site-content">
