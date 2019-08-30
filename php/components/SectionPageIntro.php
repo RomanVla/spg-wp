@@ -81,7 +81,7 @@ if (!class_exists('SectionPageIntro')) {
 
         private function get_html_buttons() {
             $html = '
-                <div class="spg-page-intro-main__buttons">
+                <div class="intro__toolbar">
                     {{html_buttons}}                    
                 </div>            
             ';
@@ -89,7 +89,7 @@ if (!class_exists('SectionPageIntro')) {
             $html_buttons = '';
             foreach ($this->data['buttons'] as $button) {
                 $html_button = '
-                    <div class="spg-page-intro-main__button">
+                    <div class="intro__button">
                         <a id="page-intro-btn-1" href="{{button_url}}" role="button"> {{button_text}} </a>
                     </div>';
 
@@ -102,6 +102,36 @@ if (!class_exists('SectionPageIntro')) {
             $html = str_replace('{{html_buttons}}', $html_buttons, $html);
 
             return $html;
+        }
+
+        private function _html_template() {
+            return '
+                    <section class="hero">
+                
+                        <div class="hero__description">
+                            <div class="intro">
+                                
+                                <div class="intro__title">
+                                    <h1>{{title}}</h1>
+                                </div>
+                                
+                                <div class="intro__subtitle">
+                                    <span class="intro-main__content-h2">
+                                        {{description}}
+                                    </span>
+                                </div>
+                                
+                                {{html_buttons}}                                                                
+                
+                            </div>
+                        </div>
+                
+                        <video class="hero__bg-video" data-element="main-video" autoplay="" loop="" muted="">
+                            <source src="{{video_mp4}}" type="video/mp4">
+                            <source src="{{video_webm}}" type="video/webm">
+                        </video>
+                    </section>            
+            ';
         }
 
         private function html_template() {

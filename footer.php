@@ -113,8 +113,8 @@ function get_section_footer_html() {
 }
 
 ?>
-                        </div><!-- #site-content -->
-        <footer class="footer">
+
+        <footer>
             <?= '' //get_section_footer_html(); ?>
         </footer>
 

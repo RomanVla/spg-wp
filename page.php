@@ -4,7 +4,7 @@
  *
  */
 
-get_header($theme_spg->theme_file_suffix);
+get_header();
 ?>
 
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -13,4 +13,4 @@ get_header($theme_spg->theme_file_suffix);
 
             endwhile; endif; ?>
 
-<?php get_footer($theme_spg->theme_file_suffix); ?>
+<?php get_footer(); ?>
