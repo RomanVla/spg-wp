@@ -1,0 +1,13 @@
+$body-font-family: $family-sans-serif !default
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: $body-font-family;
+  @include font-size();
+  line-height: 21px;
+  color: $site-black;
+}
+

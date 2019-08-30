@@ -1,0 +1,19 @@
+
+.container {
+  margin: 0 87px;
+  position: relative;
+  width: auto;
+
+}
+
+.flex-container {
+
+  display: flex;
+  align-items: flex-start;
+
+  &-align-items-center {
+    @extend .flex-container;
+    align-items: center;
+  }
+
+}

@@ -15,12 +15,14 @@
 
   }
 
+  /*
   @if $enable-grid-classes {
     .container-head {
       //@include make-container();
       //@include make-container-max-widths();
     }
   }
+  */
 
   .navbar-nav>li>a {
     padding-top: 3px;

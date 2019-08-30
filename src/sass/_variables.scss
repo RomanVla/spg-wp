@@ -1,28 +1,15 @@
+
+// Typography
+$family-sans-serif: BlinkMacSystemFont, -apple-system, "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
+$font-letter-spacing: -0.304px;
+
+// Responsiveness
+
+
+// Color varibles
 $site-main: #5cb85c;
+
 $site-white: #e6e2e3;
-$site-black: #191919;
-$site-grey: #5d5d5d;
-
-// Bootstrap variables:
-
-$secondary: $site-main;
-
-$navbar-light-color: #000000;
-
-$spacer: 1.25rem;
-
-$line-height-base: 1.375;
-$font-weight-base: 300;
-$font-family-sans-serif: 'Open Sans', sans-serif;
-$headings-font-weight: 300;
-$headings-font-family: 'Roboto', sans-serif;
-$headings-line-height: 1.125;
-
-$container-max-widths: (
-        sm: 758px,
-        md: 1010px,
-        lg: 1350px,
-        xl: 1600px
-);
-
-// end Bootstrap variables
+$site-black: #000000;
+$site-grey: #F9F9F9;
+$site-green: #23CC99;

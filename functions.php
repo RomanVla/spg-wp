@@ -58,9 +58,7 @@ if (!function_exists('spg_scripts')) {
 
     function spg_scripts()
     {
-        wp_register_style('bulma', get_stylesheet_directory_uri() . '/css/bulma.css');
         wp_register_style('spg-style', get_stylesheet_directory_uri() . '/css/spg-style.css');
-        wp_register_style('spg-style-blog', get_stylesheet_directory_uri() . '/css/spg-style-blog.css');
         wp_register_style('fontawesome-spg', get_stylesheet_directory_uri() . '/node_modules/@fortawesome/fontawesome-free/css/all.min.css');
 
         wp_register_script('jquery-spg', get_stylesheet_directory_uri() . '/node_modules/jquery/dist/jquery.min.js');

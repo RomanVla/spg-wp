@@ -1,0 +1,36 @@
+
+@mixin set-btn-text-color($color: white) {
+  color: $color;
+  a {
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+button {
+  background-color: $site-green;
+  border: 2px solid $site-green;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  @include set-btn-text-color()
+}
+
+.btn {
+
+  &__h1 {
+    @include font-size();
+    min-width: 167px;
+    padding: 13px 5px;
+    font-weight: bold;
+  }
+
+  &__transparent {
+    border: 2px solid $site-green;
+    background-color: transparent;
+    @include set-btn-text-color($site-green);
+  }
+
+}
