@@ -1,0 +1,61 @@
+$hero_min_height: 640px;
+
+.hero {
+
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(90deg,
+          rgba(16, 7, 39, 1) 0%, rgba(16, 7, 39, 0.95) 40%,
+          rgba(16, 7, 39, 0.7) 70%, rgba(16, 7, 39, 0.4) 100%);
+  min-height: $hero_min_height;
+  z-index: 1;
+
+  &__description {
+    @extend .flex-container-align-items-center;
+    color: white;
+    min-height: $hero_min_height;
+  }
+
+  &__bg-video {
+    display: block;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 20%;
+    max-height: $hero_min_height;
+    width: 100vw;
+    opacity: 0.1;
+  }
+
+}
+
+.intro {
+  @extend .container;
+  padding-top: calc(#{$hero_min_height} - 475px);
+
+  &__title {
+    @extend .content__h1;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    @extend .content__h2;
+    margin-bottom: 33px;
+    margin-left: 2px;
+  }
+
+  &__toolbar {
+    margin-left: 4px;
+  }
+
+  &__button {
+    @extend .btn__h1;
+  }
+
+  &__button:not(:last-child) {
+    margin-right: 18px;
+  }
+
+}

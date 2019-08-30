@@ -59,6 +59,7 @@ if (!class_exists('Theme_SPG')) {
 
         private $post_types = array();
         private $taxonomies = array();
+        private $page_metaboxes = array();
 
         function __construct(){
 
@@ -76,6 +77,7 @@ if (!class_exists('Theme_SPG')) {
         private function init_acf() {
 
             $this->register_options_page();
+            $this->register_page_metaboxes();
 
             add_action('acf/init', function() {
                 global $theme_spg;
@@ -127,6 +129,10 @@ if (!class_exists('Theme_SPG')) {
 
             return $menu_list;
 
+        }
+
+        private function register_page_metaboxes() {
+            $this->register_page_metabox(new PageMetaboxHero());
         }
 
         private function register_post_types() {
@@ -260,6 +266,16 @@ if (!class_exists('Theme_SPG')) {
             return $current_taxonomy_services;
         }
 
+        public function get_page_metabox_service_by_name($page_metabox_name) {
+            $current_page_metabox_service = null;
+            if(array_key_exists($page_metabox_name, $this->page_metaboxes)) {
+                $current_page_metabox_service = $this->page_metaboxes[$page_metabox_name];
+                $current_page_metabox_service->read_data_fields();
+            }
+
+            return $current_page_metabox_service;
+        }
+
         private function register_block($block) {
             if($block instanceof Section ) {
                 $block->acf_build_field();
@@ -281,7 +297,13 @@ if (!class_exists('Theme_SPG')) {
 
         }
 
-        public function get_section_header_html() {
+        private function register_page_metabox(PageMetabox $page_metabox) {
+
+            $this->page_metaboxes[$page_metabox->name] = $page_metabox;
+            $page_metabox->register_page_metabox();
+        }
+
+        public function get_menu_snippet() {
             global $theme_spg;
 
             return '
@@ -386,4 +408,5 @@ require_once(__DIR__ . '/custom-fields/spg-custom-fields.php');
 require_once(__DIR__ . '/taxonomies/spg-taxonomies.php');
 require_once(__DIR__ . '/post-types/spg-post-types.php');
 
+require_once(__DIR__ . '/page-metaboxes/PageMetabox.php');
 require_once(__DIR__ . '/components/sections.php');
