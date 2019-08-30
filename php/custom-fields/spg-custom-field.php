@@ -19,6 +19,8 @@ if (!class_exists('CustomField')) {
 
         public $choices = array();
 
+        public $args = array();
+
         function __construct(array $args)
         {
             foreach($args as $key=>$val) {

@@ -134,7 +134,12 @@ if (!class_exists('CustomFieldsBuilder')) {
                     $repeater->end();
                     break;
                 case 'repeater':
-                    $repeater = $fieldsBuilder->addRepeater($customField->name,       array('key'=>$customField->key, 'layout' => 'table'));
+                    $args = array_merge(
+                        array(
+                            'key'=>$customField->key,
+                            'layout' => 'table'),
+                        $customField->args);
+                    $repeater = $fieldsBuilder->addRepeater($customField->name, $args);
                     foreach ($customField->fields as $repeaterField) {
                         $this->buildField($repeater, $repeaterField);
                     }
